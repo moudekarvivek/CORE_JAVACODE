@@ -18,7 +18,7 @@ Employee(String name,String position,double salary)
 	this.position=position;
 	this.salary=salary;
 	count++;
-	System.out.println("\nTotal Count:"+count);
+	System.out.println("\nTotal :"+count);
 }
 
 public String toString()
