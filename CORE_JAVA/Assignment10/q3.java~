@@ -1,0 +1,42 @@
+import java.awt.*;
+import java.awt.event.*;
+import java.applet.*;
+import javax.swing.*;
+/*
+<applet code="q3" width=400 height=400>
+</applet>
+*/
+public class q3 extends JApplet
+{
+
+public void init()
+{
+	addMouseListener(new Mouseclass());
+	addMouseMotionListener(new Mouseclass());
+}
+
+class Mouseclass extends MouseAdapter
+{
+public void mouseClicked(MouseEvent e)
+{
+	String click=" ";
+	if(e.getButton()==MouseEvent.BUTTON1)
+	click="LEFT CLICK";
+	else if(e.getButton()==MouseEvent.BUTTON2)
+	click="MIDDLE CLICK";
+	else if(e.getButton()==MouseEvent.BUTTON3)
+	click="RIGHT CLICK";
+	showStatus("Mouse Clicked"+click);
+}
+
+public void mouseDragged(MouseEvent e)
+{
+showStatus("Mouse is Being Dragged");
+}
+public void mouseMoved(MouseEvent e)
+{
+showStatus("Mouse Moving X="+e.getX()+"Y="+e.getY());
+}
+
+}
+}

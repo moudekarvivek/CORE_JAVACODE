@@ -1,0 +1,71 @@
+import java.io.*;
+
+class Employee
+{
+	String name;
+	String position;
+	double salary;
+	static int count=0;
+
+Employee()
+{
+
+}
+
+Employee(String name,String position,double salary)
+{
+	this.name=name;
+	this.position=position;
+	this.salary=salary;
+	count++;
+	System.out.println("\nTotal Count:"+count);
+}
+
+public String toString()
+{
+	return name+" "+position+" "+salary+"\n";
+
+}
+
+}
+
+class employee1
+{
+	public static void main(String[] args)
+	throws IOException
+	{
+		BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("Enter the number of records:");
+		int n=Integer.parseInt(reader.readLine());
+
+	Employee[] e=new Employee[n];
+	for(int i=0;i<n;i++)
+	{
+		System.out.println("Enter the Employee Name:");
+		String name=reader.readLine();
+
+		System.out.println("Enter the Position:");
+		String position=reader.readLine();
+
+		double salary=0;
+
+		while(true)
+		{
+ 			System.out.println("Enter the salary:");
+ 			salary=Double.parseDouble(reader.readLine());
+
+		if(salary>0)
+		break;
+		}
+
+		e[i]=new Employee(name,position,salary);
+	}
+
+	for(int i=0;i<n;i++)
+	{
+	 System.out.println("\n"+e[i]);
+	}
+	
+	}
+}

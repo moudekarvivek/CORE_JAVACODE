@@ -1,0 +1,66 @@
+import javax.swing.*;
+import java.applet.*;
+import java.awt.event.*;
+import java.awt.*;
+
+/*
+<applet code="q1" width=400 height=400>
+</applet>
+*/
+
+public class q1 extends Applet implements Keylistener
+{
+	String msg="";
+	
+	String key="";
+	public void init()
+	{
+		addKeyListener(this);
+		//key=new Jlabel();
+		//add(key);
+	}
+	public void key Typed(KeyEvent k)
+	{
+		key=k.getkeyChar()+" ";
+		msg+=key;
+		
+	}
+	public void keyReleased(KeyEvent k)
+	{
+		showStatus("KeyReleased"+key);
+	}
+	public void keyPressed(KeyEvent k)
+	{
+		int code=k.getkeyCode();
+	
+	switch(code)
+	{
+		case 112:msg +="F1";key="F1";break;
+		case 113:msg +="F2";key="F2";break;
+		case 114:msg +="F3";key="F3";break;
+		case 115:msg +="F4";key="F4";break;
+		case 116:msg +="F5";key="F5";break;
+		case 117:msg +="F6";key="F6";break;
+		case 118:msg +="F7";key="F7";break;
+		case 119:msg +="F8";key="F8";break;
+		case 120:msg +="F9";key="F9";break;
+		case 121:msg +="F10";key="F10";break;
+		case 122:msg +="F11";key="F11";break;
+		case 123:msg +="F12";key="F12";break;
+		case 127:msg +="Delete";key="Delete";break;
+		case 8:msg +="Backspace";key="Backspace";break;
+		case 9:msg +="tab";key="tab";break;
+		case 10:msg +="Enter";key="Enter";break;
+		case 16:msg +="Shift";key="Shift";break;
+		case 17:msg +="ctrl";key="ctrl";break;
+		case 18:msg +="Alt";key="Alt";break;
+		case 19:msg +="Pause";key="Pause";break;
+		case 20:msg +="CapsLock";key="CapsLock";break;
+		case 27:msg +="Escape";key="Escape";break;
+		case 32:msg +="space";key="space";break;
+		case 33:msg +="PageUp";key="PageUp";break;
+		case 34:msg +="Page Down";key="F4";break;
+		case 35:msg +="End";key="End";break;
+		case 36:msg +="Home";key="";break;	
+	}
+	

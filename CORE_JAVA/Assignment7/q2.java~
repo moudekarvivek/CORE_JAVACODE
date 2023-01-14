@@ -1,0 +1,30 @@
+import java.awt.*;
+import java.applet.*;
+
+/*
+<applet code="q2" width=500 height=500>
+</applet>
+*/
+
+public class q2 extends Applet
+{
+	public void paint(Graphics g)
+	{
+	
+		//background
+		setBackground(Color.black);
+		
+		//g.drawRect(200,120,100,130);
+		g.setColor(Color.yellow);
+		g.fillRect(200,120,100,130);
+		
+		//door
+		g.setColor(Color.white);
+		//g.drawRect(300,120,100,130);
+		g.fillRect(230,190,40,60);
+		
+		//roof
+		
+		int []x={200,300,250};
+		int y[]={120,120,40};
+		g.setColor
