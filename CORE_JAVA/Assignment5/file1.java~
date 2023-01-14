@@ -1,0 +1,14 @@
+import java.io.*;
+class file1
+{
+	public static void main(String args[])
+	{
+		String fname=args[0];
+		File f=new File(fname)
+		if(f.isDirectory())
+		{
+			int count=0;
+			System.out.println("It is a Directory:");
+			String s[]=f.list();
+			System.out.println("\n The contents of directory:");
+			for(int i=0;i<s.length

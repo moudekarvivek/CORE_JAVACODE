@@ -1,0 +1,29 @@
+package MscCAII;
+
+public class MscCAII
+{
+int SemITotal,SemIITotal;
+
+public MscCAII()
+{
+}
+
+public MscCAII(int m3,int mark)
+{
+	this.SemITotal=marksI;
+	this.SemIITotal=marksII;
+}
+
+public void setsumtotal(int markI,int markII)
+{
+this.SemITotal=markI;
+this.SemIITotal=markII;
+}
+
+public int gettotal()
+{
+return this.SemITotal + this.SemIITotal;
+}
+
+}
+

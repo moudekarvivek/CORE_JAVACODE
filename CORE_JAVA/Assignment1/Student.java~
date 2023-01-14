@@ -1,0 +1,86 @@
+import java.io.*;
+/*import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.IOException;
+*/
+class Student
+{
+int roll_number;
+String name;
+float percentage;
+
+Student()
+{
+
+}
+
+Student(int roll_number,String name,float percentage)
+{
+this.roll_number=roll_number;
+this.name=name;
+this.percentage=percentage;
+}
+
+public float getpercent()
+{
+return this.percentage;
+}
+
+public static void sortStudent(Student[] s,int n)
+{
+	for(int i=0;i<n-1;i++)
+	{
+	 for(int j=0;j<i;j++)
+	 {
+	  if(s[j].getpercent()>s[j+1].getpercent())
+		{
+		 Student temp=s[j];
+		 s[j]=s[j+1];
+		 s[j+1]=temp;
+		}
+
+	 }
+	}
+}
+
+public String toString()
+{
+return this.roll_number+" "+this.name+" "+this.percentage+"\n";
+}
+
+class student1
+{
+public static void main(String[] args)  
+
+throws IOException
+{
+BufferedReader reader=new BufferedReader(new InputStreamReader(System.in));
+
+System.out.println("Enter Number of student:");
+int n=Integer.parseInt(reader.readLine());
+
+Student[] Students=new Student[n];
+
+for(int i=0;i<n;i++)
+{
+	System.out.println("Enter the Roll number:");
+	int roll_number=Integer.parseInt(reader.readLine());
+
+	System.out.println("Enter the name of the student:");
+	String name=reader.readLine();
+
+	System.out.println("Enter the Percentage:");
+	float per=Float.parseFloat(reader.readLine());
+
+	Students[i]=new Student(roll_number,name,per);
+}
+Student.sortStudent(Students,Students.length);
+
+for(int i=0;i<Students.length;i++)
+{
+	System.out.println("\n"+Students[i]);
+
+}
+}
+}
+}
